@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:service_booking_app/mywidgets/custom_app_bar_widget.dart';
+import 'package:service_booking_app/widgets/mywidgets/app_bar_widget.dart';
 
 class NotificationsScreen extends StatefulWidget {
   @override
@@ -27,7 +27,7 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: customAppBarWidget(title: 'Notifications'),
+      appBar: AppBarWidget(title: 'Notifications'),
       body: ListView.builder(
         itemCount: notifications.length,
         itemBuilder: (context, index) {

@@ -212,7 +212,7 @@
           ],
           "photos": ["url_to_photo1", "url_to_photo2"],
           "reviews": [
-            {"user": "Khaled", "rating": 4, "comment": "It is Good tools"},
+            {"user": "Khaled", "rating": 9, "comment": "It is Good tools"},
             {"user": "Ahmad", "rating": 5, "comment": "Excellent service"}
           ],
           "availabilitySlots": {"calendar": ["2024-06-01", "2024-06-02"], "timeSlots": ["10:00 AM", "11:00 AM"]}
@@ -260,7 +260,7 @@
           ],
           "photos": ["url_to_photo1", "url_to_photo2"],
           "reviews": [
-            {"user": "Hamed", "rating": 4, "comment": "It is Good tools"},
+            {"user": "Hamed", "rating": 7, "comment": "It is Good tools"},
             {"user": "Ibrahim", "rating": 5, "comment": "Excellent service"}
           ],
           "availabilitySlots": {"calendar": ["2024-06-01", "2024-06-02"], "timeSlots": ["10:00 AM", "11:00 AM"]}

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-AppBar customAppBarWidget({
+AppBar AppBarWidget({
   required String title,
   List<Widget>? actions,
   PreferredSizeWidget? bottom,

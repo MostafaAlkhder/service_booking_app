@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:service_booking_app/bloc/cubit.dart';
 import 'package:service_booking_app/bloc/states.dart';
-import 'package:service_booking_app/mywidgets/bottom_nav_bar_widget.dart';
+import 'package:service_booking_app/widgets/mywidgets/bottom_nav_bar_widget.dart';
 import 'package:service_booking_app/styles/colors.dart';
 
 class Layout extends StatefulWidget {

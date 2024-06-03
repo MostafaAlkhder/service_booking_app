@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../mywidgets/custom_app_bar_widget.dart';
+import '../widgets/mywidgets/app_bar_widget.dart';
 
 class MyProfileScreen extends StatefulWidget {
   @override
@@ -19,7 +19,7 @@ class _MyProfileScreenState extends State<MyProfileScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: customAppBarWidget(title: 'My Profile'),
+      appBar: AppBarWidget(title: 'My Profile'),
       body: ListView(
         padding: EdgeInsets.all(16.0),
         children: <Widget>[
