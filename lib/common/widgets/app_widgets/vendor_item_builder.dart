@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:service_booking_app/styles/colors.dart';
-import 'package:service_booking_app/widgets/mywidgets/list_tile_widget.dart';
 
 Widget VendorItemBuilderWidget({
   required String name,

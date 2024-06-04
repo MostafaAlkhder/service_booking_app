@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:service_booking_app/models/services.dart';
-import 'package:service_booking_app/widgets/mywidgets/circle_image_widget.dart';
+import 'package:service_booking_app/common/widgets/mywidgets/circle_image_widget.dart';
 
 Widget serviceItemBuilderWidget(
     BuildContext context, ServiceModel service, int index) {

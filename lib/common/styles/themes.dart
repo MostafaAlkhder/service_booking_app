@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:service_booking_app/styles/colors.dart';
+import 'package:service_booking_app/common/styles/colors.dart';
 
 class Themes {
   static ThemeData mainTheme = ThemeData(

@@ -8,6 +8,8 @@ class AppInitialState extends AppStates {}
 
 class AppChangeBottomNavBarState extends AppStates {}
 
+class AppChangeServicesFilterSelectedValue extends AppStates {}
+
 class AppInitial extends AppStates {}
 
 class AppLoading extends AppStates {}

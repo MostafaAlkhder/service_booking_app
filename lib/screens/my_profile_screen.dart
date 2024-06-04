@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../widgets/mywidgets/app_bar_widget.dart';
+import '../common/widgets/mywidgets/app_bar_widget.dart';
 
 class MyProfileScreen extends StatefulWidget {
   @override

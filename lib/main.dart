@@ -4,8 +4,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:service_booking_app/bloc/bloc_observer.dart';
 import 'package:service_booking_app/bloc/cubit.dart';
 import 'package:service_booking_app/bloc/states.dart';
-import 'package:service_booking_app/screens/layout.dart';
-import 'package:service_booking_app/styles/themes.dart';
+import 'package:service_booking_app/common/classes/navigation_helper.dart';
+import 'package:service_booking_app/screens/layout_screen.dart';
+import 'package:service_booking_app/common/styles/themes.dart';
 
 void main() {
   Bloc.observer = MyBlocObserver();
@@ -23,6 +24,7 @@ class MyApp extends StatelessWidget {
         listener: (context, state) {},
         builder: (context, state) {
           return MaterialApp(
+            navigatorKey: NavigationHelper.navigatorKey,
             title: 'Project Name',
             theme: Themes.mainTheme,
             // darkTheme: Themes.darkTheme,,

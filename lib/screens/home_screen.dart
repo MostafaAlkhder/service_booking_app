@@ -1,19 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:animated_conditional_builder/animated_conditional_builder.dart';
-import 'package:service_booking_app/widgets/app_widgets/vendor_item_builder.dart';
-import 'package:service_booking_app/widgets/app_widgets/service_item_builder.dart';
+import 'package:service_booking_app/common/classes/navigation_helper.dart';
+import 'package:service_booking_app/screens/services_screen.dart';
+import 'package:service_booking_app/common/widgets/app_widgets/vendor_item_builder.dart';
+import 'package:service_booking_app/common/widgets/app_widgets/service_item_builder.dart';
 import 'package:service_booking_app/bloc/cubit.dart';
 import 'package:service_booking_app/bloc/states.dart';
 import 'package:service_booking_app/gen/assets.gen.dart';
 import 'package:service_booking_app/models/services.dart';
 import 'package:service_booking_app/models/vendor.dart';
-import 'package:service_booking_app/widgets/mywidgets/carousel_slider_widget.dart';
-import 'package:service_booking_app/widgets/mywidgets/circle_image_widget.dart';
-import 'package:service_booking_app/widgets/mywidgets/horizontal_list_view_separated_widget.dart';
-import 'package:service_booking_app/widgets/mywidgets/list_tile_widget.dart';
-import 'package:service_booking_app/widgets/mywidgets/loading_sniper_widget.dart';
-import 'package:service_booking_app/styles/colors.dart';
+import 'package:service_booking_app/common/widgets/mywidgets/carousel_slider_widget.dart';
+import 'package:service_booking_app/common/widgets/mywidgets/circle_image_widget.dart';
+import 'package:service_booking_app/common/widgets/mywidgets/horizontal_list_view_separated_widget.dart';
+import 'package:service_booking_app/common/widgets/mywidgets/loading_sniper_widget.dart';
+import 'package:service_booking_app/common/styles/colors.dart';
+import 'package:service_booking_app/common/widgets/mywidgets/text_button_widget.dart';
+import 'package:service_booking_app/screens/vendors_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -27,6 +30,7 @@ class _HomeScreenState extends State<HomeScreen> {
       listener: (context, state) {},
       builder: (BuildContext context, AppStates state) {
         AppCubit cubit = AppCubit.get(context);
+
         return AnimatedConditionalBuilder(
           condition: cubit.isLoading == false,
           builder: (BuildContext context) {
@@ -62,10 +66,12 @@ class _HomeScreenState extends State<HomeScreen> {
                                 fontSize: 20, fontWeight: FontWeight.bold),
                           ),
                           Spacer(),
-                          Text(
-                            "View All",
-                            style: TextStyle(color: Colors.blue, fontSize: 16),
-                          ),
+                          TextButtonWidget(
+                              text: "View All",
+                              onPressed: () =>
+                                  NavigationHelper.push(ServicesScreen()),
+                              fontSize: 16,
+                              textColor: Colors.blue)
                         ],
                       ),
                       SizedBox(
@@ -92,10 +98,12 @@ class _HomeScreenState extends State<HomeScreen> {
                                 fontSize: 20, fontWeight: FontWeight.bold),
                           ),
                           Spacer(),
-                          Text(
-                            "View All",
-                            style: TextStyle(color: Colors.blue, fontSize: 16),
-                          ),
+                          TextButtonWidget(
+                              text: "View All",
+                              onPressed: () =>
+                                  NavigationHelper.push(VendorsScreen()),
+                              fontSize: 16,
+                              textColor: Colors.blue)
                         ],
                       ),
                       SizedBox(
@@ -112,7 +120,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 onTap: () {}),
                         separatorWidth: 20.0,
                         height: 200,
-                      )
+                      ),
                     ],
                   ),
                 ),

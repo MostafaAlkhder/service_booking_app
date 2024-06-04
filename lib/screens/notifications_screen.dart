@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:service_booking_app/widgets/mywidgets/app_bar_widget.dart';
+import 'package:service_booking_app/common/widgets/mywidgets/app_bar_widget.dart';
 
 class NotificationsScreen extends StatefulWidget {
   @override
