@@ -8,9 +8,7 @@ import 'package:service_booking_app/models/category.dart';
 import 'package:service_booking_app/models/services.dart';
 import 'package:service_booking_app/models/vendor.dart';
 import 'package:service_booking_app/screens/my_profile_screen.dart';
-import 'package:service_booking_app/screens/notifications_screen.dart';
 import 'package:service_booking_app/screens/home_screen.dart';
-import 'package:service_booking_app/screens/myBookings_screen.dart';
 import 'package:flutter/services.dart' show rootBundle;
 
 class AppCubit extends Cubit<AppStates> {
@@ -27,16 +25,13 @@ class AppCubit extends Cubit<AppStates> {
   ];
   List<String?> servicesFiltersList = [
     "All",
-    "catigory",
+    "category",
     "price range",
     "sorted by price",
   ];
   String? serviceFilterSelectedValue = "All";
   List<BottomNavigationBarItem> bottomNavBarItems = [
     BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-    BottomNavigationBarItem(
-        icon: Icon(Icons.notifications), label: 'Notifications'),
-    BottomNavigationBarItem(icon: Icon(Icons.book), label: 'My Bookings'),
     BottomNavigationBarItem(icon: Icon(Icons.person), label: 'My Profile'),
   ];
   int currentIndex = 0;
@@ -47,8 +42,6 @@ class AppCubit extends Cubit<AppStates> {
   List<VendorModel> vendors = [];
   List<Widget> screens = [
     HomeScreen(),
-    NotificationsScreen(),
-    MyBookingsScreen(),
     MyProfileScreen(),
   ];
 
@@ -62,7 +55,7 @@ class AppCubit extends Cubit<AppStates> {
     if (value == servicesFiltersList[0])
       filteredServices = this.services;
     else if (value == servicesFiltersList[1])
-      filteredServices = this.getServicesByCategory(1);
+      filteredServices = this.getServicesByCategory(3);
     if (value == servicesFiltersList[2])
       filteredServices = this.getServicesByPriceRange(100, 1000);
     if (value == servicesFiltersList[3])

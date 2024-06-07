@@ -19,21 +19,21 @@ class ServicesScreen extends StatelessWidget {
         AppCubit cubit = AppCubit.get(context);
         return Scaffold(
             appBar: AppBarWidget(title: "Services"),
-            body: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                DropdownWidget<String?>(
-                  currentValue: cubit.serviceFilterSelectedValue,
-                  items: cubit.servicesFiltersList,
-                  displayItem: (item) =>
-                      item.toString(), // How to display each item
-                  onSelected: (value) {
-                    cubit.changeServiceFilterSelectedValue(value);
-                  },
-                ),
-                Expanded(
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
+            body: Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  DropdownWidget<String?>(
+                    currentValue: cubit.serviceFilterSelectedValue,
+                    items: cubit.servicesFiltersList,
+                    displayItem: (item) =>
+                        item.toString(), 
+                    onSelected: (value) {
+                      cubit.changeServiceFilterSelectedValue(value);
+                    },
+                  ),
+                  Expanded(
                     child: ListViewSeparatedWidget(
                         items: cubit.filteredServices,
                         itemBuilder: (context, item) => ListTileWidget(
@@ -46,8 +46,8 @@ class ServicesScreen extends StatelessWidget {
                             ),
                             trailing: Image.asset(item.image))),
                   ),
-                ),
-              ],
+                ],
+              ),
             ));
       },
     );
